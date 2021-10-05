@@ -1,0 +1,24 @@
+contextroot vai ser o nome do projeto na URL
+Apache Tomcat -> servidor que vai cuidar da aplicação web
+Servlet é uma especificação Java. Cada especificação contem o seu XML. Antigamente, era obrigatório. Hoje, não é tão importante
+Todos os arquivos da aplicação vai ficar na WebContent
+O tomcat precisa reconhecer o projeto. Botão direito no tomcat e add and remove para incluí-lo
+Servlet recebe requisição do navegador querendo acessar o html dentro do projeto.
+O tomcat utiliza de projetos web dinamicos.
+Quando o tomcat é iniciado, a máquina virtual é iniciada permitindo que o Tomcat suba o servidor com várias classes e o método main
+Servlet é um objeto que fica dentro do projeto e o projeto fica dentro do tomcat. É um objeto especial, que pode ser chamado via HTTP e gera uma resposta dinamicamente
+service atende uma requisição http
+Requisição e resposta do service são atendidos por dois objetos no java
+Ao usar URL /oi, eu quero pegar o retorno do servlet
+
+PrintWriter funciona para escrever a saída e devolver os caracteres para o navegador. Não é saída para o console, como o System.out.println()
+
+Para especificar se é só aceito post ou get, o método service deve ser doPost ou doGet
+
+O que o navegador entende é html. Uma  página dinamica java (JSP - Java Server Page) é uma forma de programar (minimamente) dentro de um html. O JSP é uma página HTML com JSTL (Java Standard Library) e EL (Expression Language)
+
+taglib core é bem ligada a fluxo e para casos a URL seja alterada e não seja necessários fazer alterações já chumbadas no código
+
+Tomar cuidado para dar F5 e ficar submetendo o formulário várias vezes. Nao utilizar dispatcher de um servlet para outro, que é um redirecionamento server side. Buscar mandar uma resposta para o cliente e falar para ele fazer a chamada ao outro servlet (redirecionamento client side através do navegador)
+
+Para nao ficar com uma operação amarrada no request e, sempre que dar um F5 a transação repetir uma operação, como alternativa pode ser feito um redirect para uma pagina de leitura atraves do response.sendRedirect(String path), que possui codigo 30X
